@@ -1,0 +1,316 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: #074444 url(../img/wlbg.png) no-repeat 102% 116%;
+  color: #fff;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+}
+
+ul {
+  list-style: none;
+}
+
+.wrap {
+  /* height: 100vh; */
+}
+
+main {
+  border-top: 1px solid transparent;
+  min-height: calc(100vh - 142px);
+  /* main标签的最小高度应该是减去nav+foot的高估 */
+}
+
+/*  内容区域*/
+
+.main {
+  margin: 0 auto;
+  width: 1398px;
+  margin-top: 30px;
+}
+
+.mxian_succ {
+  margin: 0 auto;
+  width: 1398px;
+  margin-top: 30px;
+  border: 1px solid #0d7474;
+  background: #043434;
+  min-height: 540px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .8);
+}
+
+@media only screen and (max-width: 1399px) {
+  .mxian_succ,.main {
+    width: 1208px !important;
+  }
+
+}
+
+/*  table*/
+
+.table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.table thead tr td, .table thead tr th {
+  text-align: center;
+  color: #84f1f1;
+  font-size: 14px;
+  background: #035252;
+  word-break:break-all;
+}
+
+.table tr td, .table tr th {
+  text-align: center;
+  height: 34px;
+  padding: 0 5px;
+  border: 1px solid #0d7474;
+  color: #ddd;
+  font-size: 13px;
+  word-break:break-all;
+}
+
+.tables tbody tr:nth-child(odd) {
+  background: #053b3b;
+}
+
+.table tbody tr:hover {
+  transition: all linear .3s;
+  color: #fff;
+  background: #073f3f;
+}
+
+/*  输入框*/
+
+.txt {
+  padding: 4px 0;
+  color: #84f1f1;
+  background: #012323;
+  border: 1px solid transparent ;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 14px;
+  height: 30px;
+  box-sizing: border-box;
+  box-shadow: inset 0 2px 5px 1px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .2);
+  outline: none;
+  transition: all 500ms;
+}
+.txt:focus{
+  border-color: #dd6b66;
+  color: #dd6b66;
+}
+/*  按钮*/
+
+button, .btn, [type='button'] {
+  display: inline-block;
+  border: none;
+  padding: 0 10px;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  background: #24A5CD;
+  font-size: 14px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 300ms;
+  outline: none;
+  margin-left: 4px;
+}
+
+select {
+  width: auto;
+  padding: 0 5px;
+  background: #022626;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  border: none;
+  color: #84f1f1;
+  margin-right: 20px;
+  padding-right: 20px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border-radius: 4px;
+  background: #012323 url('../../assets/img/icon_select.gif') no-repeat right center;
+  box-shadow: inset 0 2px 5px 1px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .2);
+}
+
+button:hover, .btn:hover, [type='button']:hover {
+  background: #2d95b5;
+}
+
+.primary {
+  background: #0d7474;
+}
+
+.primary:hover {
+  background: #0A9C9C;
+}
+
+.warning {
+  background: #f6726c;
+}
+
+.warning:hover {
+  background: #fd4d45;
+}
+
+/*  功能按钮*/
+
+.frbutt {
+  display: inline-block;
+  margin-left: 5px;
+  height: 32px;
+  padding: 0 15px;
+  background: #0d7474;
+  line-height: 32px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all linear .3s;
+}
+
+.frbutt:hover {
+  background: #0A9C9C;
+}
+
+/*  字体颜色*/
+
+.color_warning {
+  cursor: pointer;
+  color: #f6726c;
+}
+.color_warning :hover{
+    color: #f6726c;
+}
+.color_green{
+  color: #3bca3b;
+}
+.color_green:hover{
+  color: #1ee81e;
+}
+.el-time-panel__btn.confirm{
+  color: #fff;
+}
+/*  动画*/
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+.component-fade-enter-active, .component-fade-leave-active {
+  transition: opacity .3s ease;
+}
+.component-fade-enter, .component-fade-leave-to{
+  opacity: 0;
+}
+/*滚动条颜色  */
+
+.bscroll-indicator {
+  background: rgba(255, 255, 255, 0.4) !important;
+  border: none !important;
+}
+
+/*  overlay,大弹框样式*/
+
+.overlay_wrap {
+  width: 70vw;
+  height: 80vh;
+  padding: 10px;
+  background: #043434;
+  box-shadow: 0 2px 5px 5px rgba(0, 0, 0, .1);
+  color: #84f1f1;
+}
+@media screen and (max-width: 1399px) {
+  .overlay_wrap {
+    width: 90vw;
+  }
+}
+.tree_tollgo {
+    position: absolute;
+    top: 50%;
+    right: -21px;
+    width: 20px;
+    height: 20px;
+    background: url(../img/icons.png) no-repeat -59px -224px;
+    cursor: pointer;
+    background-position: -59px -224px;
+}
+/*  浮动*/
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
+/*  时间空间大小*/
+.modified_ate {
+    display: inline-block;
+    width: 170px !important;
+}
+/* 滚动条zindex */
+.bscroll-vertical-scrollbar{
+  z-index: 1 !important;
+}
+/*  tree*/
+.tree_wrap{
+  position: relative;
+  height: 580px;
+}
+.treeZone{
+    height: 100%;
+    background: #012828;
+    overflow: hidden;
+}
+.zone{
+  box-sizing: border-box;
+  width: 300px;
+  box-sizing: border-box;
+  padding-left: 20px;
+}
+/*  分页位置*/
+.el-pagination{
+  text-align: right;
+}
+
+/*  小按钮*/
+.btn-small {
+  line-height: 24px;
+  padding: 0 5px;
+}
+
+/*分页按钮样式*/
+.el-pagination.is-background .btn-prev,
+.el-pagination.is-background .btn-next,
+.el-pagination.is-background .el-pager li {margin: 0 5px;background-color: #045b5b;color: #ccc;min-width: 30px;border-radius: 2px; }
+
+/*分页选中时按钮样式*/
+.el-pagination.is-background .el-pager li:not(.disabled).active {background-color: #0eb6b6;color: #fff; }
+
+/*分页手动选择条数和页数输入框样式*/
+.el-input__inner {
+  background-color: #012323;
+  border: 1px solid #0d7474;
+  color: #84f1f1;
+}
+.el-input__inner::-webkit-input-placeholder {color: #c0c4cc; }
+.el-input__inner:-ms-input-placeholder {color: #c0c4cc; }
+.el-input__inner::-ms-input-placeholder {color: #c0c4cc; }
+.el-input__inner::placeholder {color: #c0c4cc; }
+.el-input__inner:hover {border-color: #c0c4cc; }
+.el-input__inner:focus {outline: none;border-color: #409EFF; }
