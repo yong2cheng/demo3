@@ -298,7 +298,7 @@
             .paging {width: 94%;margin: 35px 3%;text-align: right}
             .overlay_tc {height:90%; width:1398px}
             .color_show {color:#f6726c !important;cursor: pointer;}
-            .show_button{background:rgba(0,0,0,0);margin-left: 0;height: 34px;width:100%}
+            .show_button{background: transparent !important;border: 0 !important;margin-left: 0;height: 34px;width: 100%;}
             .show_button:hover {background: rgba(0,0,0,0) !important}
             .oprationTable .el-popover__reference:focus:hover, .oprationTable .el-popover__reference:focus:not(.focusing) {background: rgba(0,0,0,0) !important}
             @media (max-width:1399px){

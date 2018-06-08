@@ -297,16 +297,16 @@ button:hover, .btn:hover, [type='button']:hover {
 /*分页按钮样式*/
 .el-pagination.is-background .btn-prev,
 .el-pagination.is-background .btn-next,
-.el-pagination.is-background .el-pager li {margin: 0 5px;background-color: #045b5b;color: #ccc;min-width: 30px;border-radius: 2px; }
+.el-pagination.is-background .el-pager li {margin: 0 5px;background-color: #045b5b !important;color: #ccc !important;min-width: 30px;border-radius: 2px; }
 
 /*分页选中时按钮样式*/
-.el-pagination.is-background .el-pager li:not(.disabled).active {background-color: #0eb6b6;color: #fff; }
+.el-pagination.is-background .el-pager li:not(.disabled).active {background-color: #0eb6b6 !important;color: #fff !important; }
 
 /*分页手动选择条数和页数输入框样式*/
 .el-input__inner {
-  background-color: #012323;
-  border: 1px solid #0d7474;
-  color: #84f1f1;
+  background-color: #012323 !important;
+  border: 1px solid #0d7474 !important;
+  color: #84f1f1 !important;
 }
 .el-input__inner::-webkit-input-placeholder {color: #c0c4cc; }
 .el-input__inner:-ms-input-placeholder {color: #c0c4cc; }
