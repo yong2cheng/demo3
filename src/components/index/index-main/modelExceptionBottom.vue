@@ -28,24 +28,6 @@
             this.successRanking();
         },
         methods: {
-            // 获取每天多个系统的模型变更情况
-            // getModelChangeByDay: function() {
-            //     this.$http.get("web-interface/consistency/getModelChangeByDay",{
-            //         params:{
-            //             changeDate:this.dayDate,
-            //         }
-            //     }).then((res) => {
-            //         if (res.status == 200) {
-            //             if(res.data.code == 1) {
-                            
-            //             }
-            //         }
-            //     }).catch(function(error) {
-            //         console.log(error);
-            //     });
-            // }, 
-
-            // 采集成功率排名
             successRanking: function() {
                 var mxyl_pie = echarts.init(document.getElementById('mxyl_pie'),'dark');
                 // app.title = '模型类异常分类饼图';

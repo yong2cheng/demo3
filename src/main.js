@@ -12,7 +12,7 @@ import 'element-ui/lib/theme-chalk/index.css';
 
 Vue.prototype.$http = axios
 Vue.prototype.$day = dayjs
-axios.defaults.baseURL = 'http://10.172.246.231:9099'
+axios.defaults.baseURL = 'http://10.172.246.231:9100'
 Vue.config.productionTip = false
 // Vue.use(TimePicker)
 // Vue.use(DatePicker)

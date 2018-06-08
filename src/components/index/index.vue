@@ -17,7 +17,7 @@
 			</div>
 			<modelExceptionMiddle :datas="time"/>
 			<modelExceptionBottom :datas="time"/>
-			<modelExceptionTop :datas="time"/>
+			<!-- <modelExceptionTop :datas="time"/> -->
 		</div>
 	</main>
 	<foot/>

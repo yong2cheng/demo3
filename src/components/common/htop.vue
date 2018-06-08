@@ -4,7 +4,7 @@
     <div class="tLeft">
       <router-link to="/shouye"><img src="../../assets/img/logo.jpg" alt=""></router-link>
     </div>
-    <h2 class="title">数据中心数据质量全生命监控</h2>
+    <h2 class="title"></h2>
     <div class="tRight">
       <span id="topTime">{{SSTime}}</span> &nbsp;&nbsp;&nbsp;&nbsp;您好:
       <!-- <span class="user">{{getUserName}}</span>&nbsp;&nbsp;&nbsp;&nbsp; -->
