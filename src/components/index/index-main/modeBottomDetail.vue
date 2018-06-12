@@ -48,9 +48,11 @@
                                                         trigger="hover">
                                                         <p style="margin-bottom: 10px">该字段修改前的值:</p>
                                                         <p>{{items.oldValue}}</p>
-                                                        <el-button slot="reference" :class="{color_show:items.oldValue,show_button:showButton}" disableed="disableed">{{items.newValue}}</el-button>
+                                                        <el-button slot="reference" :class="{color_show:items.oldValue,show_button:showButton}" disableed="disableed" v-if="items.newValue.length>=15" :title="items.newValue">{{items.newValue.length>15?items.newValue.substr(0,15)+"...":items.newValue}}</el-button>
+                                                        <el-button slot="reference" :class="{color_show:items.oldValue,show_button:showButton}" disableed="disableed" v-if="items.newValue.length<15">{{items.newValue}}</el-button>
                                                       </el-popover>
-                                                      <span :class="{show_button:showButton}" v-if="!items.oldValue">{{items.newValue}}</span>
+                                                      <span :class="{show_button:showButton}" v-if="!items.oldValue&&items.newValue.length>=15" :title="items.newValue">{{items.newValue.length>15?items.newValue.substr(0,15)+"...":items.newValue}}</span>
+                                                      <span :class="{show_button:showButton}" v-if="!items.oldValue&&items.newValue.length<15">{{items.newValue}}</span>
                                                     </td>
                                                 </tr>
                                         </tbody>
@@ -287,7 +289,7 @@
         
         <style lang="css">
             .clearfix:after {content:"";height:0;line-height: 0;display: block;visibility: hidden;clear: both;}
-            .main_index{border: 1px solid #0d7474;width: 96%;margin: 30px auto 0;height: 702px;box-sizing: border-box;}
+            .main_index{border: 1px solid #0d7474;width: 96%;margin: 30px auto 0;box-sizing: border-box;}
             .tool_bar{width: 100%;border-bottom: 1px solid #0d7474;height: 50px;line-height: 50px;box-sizing: border-box;text-align: right;padding-right: 30px;}
             .tool_bar h2 {float: left;margin-left: 30px;font-size: 20px;color: #84f1f1;}
             .tool_bar select {width:80px}
