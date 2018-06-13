@@ -313,7 +313,7 @@
             .show_button{background: transparent !important;border: 0 !important;margin-left: 0;height: 34px;width: 100%;}
             .show_button:hover {background: rgba(0,0,0,0) !important}
             .oprationTable .el-popover__reference:focus:hover, .oprationTable .el-popover__reference:focus:not(.focusing) {background: rgba(0,0,0,0) !important}
-            .mode_bottom_detail_table{width: auto;}
+            .mode_bottom_detail_table{min-width:1340px;;width: auto;}
             .mode_bottom_detail_table th,.mode_bottom_detail_table td {white-space: nowrap}
             @media (max-width:1399px){
                 .overlay_tc{ width:1208px;}
