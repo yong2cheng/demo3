@@ -317,6 +317,7 @@
             .mode_bottom_detail_table th,.mode_bottom_detail_table td {white-space: nowrap}
             @media (max-width:1399px){
                 .overlay_tc{ width:1208px;}
+                .mode_bottom_detail_table{min-width:1155px;}
             }
             @media (max-height:700px){
                 .count_top_tc {height: 580px;}
