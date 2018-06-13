@@ -24,8 +24,8 @@
                     <overlay :close.sync="isShow">
                         <div class="overlay_tc"> 
                             <div class="count_top_tc">
-                                <div>
-                                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table oprationTable" style="table-layout: auto">
+                                <div class="scroll" style="position:relative;overflow:hidden;">
+                                    <table class="table mode_bottom_detail_table">
                                         <thead>
                                             <tr>
                                                 <td :colspan="tableHeadLength" class="count_bottom_title clearfix">{{titleName}}{{oprationName}}详情
@@ -48,11 +48,11 @@
                                                         trigger="hover">
                                                         <p style="margin-bottom: 10px">该字段修改前的值:</p>
                                                         <p>{{items.oldValue}}</p>
-                                                        <el-button slot="reference" :class="{color_show:items.oldValue,show_button:showButton}" disableed="disableed" v-if="items.newValue.length>=15" :title="items.newValue">{{items.newValue.length>15?items.newValue.substr(0,15)+"...":items.newValue}}</el-button>
-                                                        <el-button slot="reference" :class="{color_show:items.oldValue,show_button:showButton}" disableed="disableed" v-if="items.newValue.length<15">{{items.newValue}}</el-button>
+                                                        <!-- <el-button slot="reference" :class="{color_show:items.oldValue,show_button:showButton}" disableed="disableed" v-if="items.newValue.length>=15" :title="items.newValue">{{items.newValue.length>15?items.newValue.substr(0,15)+"...":items.newValue}}</el-button> -->
+                                                        <el-button slot="reference" :class="{color_show:items.oldValue,show_button:showButton}" >{{items.newValue}}</el-button>
                                                       </el-popover>
-                                                      <span :class="{show_button:showButton}" v-if="!items.oldValue&&items.newValue.length>=15" :title="items.newValue">{{items.newValue.length>15?items.newValue.substr(0,15)+"...":items.newValue}}</span>
-                                                      <span :class="{show_button:showButton}" v-if="!items.oldValue&&items.newValue.length<15">{{items.newValue}}</span>
+                                                      <!-- <span :class="{show_button:showButton}" v-if="!items.oldValue&&items.newValue.length>=15" :title="items.newValue">{{items.newValue.length>15?items.newValue.substr(0,15)+"...":items.newValue}}</span> -->
+                                                      <span :class="{show_button:showButton}" v-if="!items.oldValue">{{items.newValue}}</span>
                                                     </td>
                                                 </tr>
                                         </tbody>
@@ -84,6 +84,7 @@
         import navs from '@/components/common/nav'
         import foot from '@/components/common/foot'
         import overlay from '@/components/common/overlay'
+        import BScroll from 'better-scroll'
         export default {
             data: function() {
                 return {
@@ -104,7 +105,8 @@
                     firstChangeModel:'',
                     tableHeadLength:'',
                     titleName:'',
-                    myPie:''
+                    myPie:'',
+                    scroll:''
                 }
             },
             components:{
@@ -137,6 +139,9 @@
                 // this.ChangeDetailStatis();
             },
             mounted: function() {
+                this.$nextTick(() => {
+                    this.scroll = new BScroll('.scroll',{ scrollX:true,scrollbar:{fade: false,interactive: true} ,mouseWheel: true});
+                })
             },
             methods: {
                 // 获取每天多个系统的模型变更情况
@@ -262,6 +267,11 @@
                             this.tableHeadLength = this.firstChangeModel.length+1
                         }
                         this.dataCount = res.data.dataCount;
+                        this.$nextTick(() => {
+                            this.scroll.destroy()
+                            this.scroll = new BScroll('.scroll',{ scrollX:true,scrollbar:{fade: false,interactive: true} ,mouseWheel: true});
+                        })
+                        
                     }
                 }
                 }).catch(function(error) {
@@ -303,6 +313,8 @@
             .show_button{background: transparent !important;border: 0 !important;margin-left: 0;height: 34px;width: 100%;}
             .show_button:hover {background: rgba(0,0,0,0) !important}
             .oprationTable .el-popover__reference:focus:hover, .oprationTable .el-popover__reference:focus:not(.focusing) {background: rgba(0,0,0,0) !important}
+            .mode_bottom_detail_table{width: auto;}
+            .mode_bottom_detail_table th,.mode_bottom_detail_table td {white-space: nowrap}
             @media (max-width:1399px){
                 .overlay_tc{ width:1208px;}
             }
